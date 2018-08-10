@@ -2,56 +2,27 @@
     outline: 1px solid red;
 } */
 .bg-img {
-    background-image: url(/assets/images/itunes-logo.png);
-    height: 100%;
-    width: 100%;
+    background-image: url(/assets/images/tape.jpg);
+    height: 100vh;
+    width: 100vw;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow-x: hidden;
 }
-.h100 {
-    height: 100vh;
-}
-.w100 {
-    width: 100vw;
+.form-pos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 .spacer {
-    height: 11vh;
+    color: transparent;
+    font-size: 10em;
 }
-.form-group {
-    width: 65vw;
+.top-hit {
     display: flex;
-    flex-flow: wrap column;
     justify-content: center;
-    align-items: flex-end;
-    transform: rotateZ(349deg);
-}
-.form-control {
-    width: 40%;
-    background-color: transparent;
-    border: none;
-    border-bottom: 2px solid whitesmoke;
-    padding-bottom: 2em;
-    font-size: 1.5em;
-    color: whitesmoke;
-}
-.form-control:focus, .form-control:active {
-    background-color: transparent;
-    color: whitesmoke;
-}
-.form-control::placeholder {
-    color: whitesmoke;
-}
-
-/* Mobile */
-@media (pointer: coarse) and (hover: none) {
-    .spacer {
-        height: 25vh;
-    }
-    .form-group {
-        width: 75%;
-    }
-    .form-control {
-        width: 55%;
-    }
+    align-items: center;
+    height: 100vh;
 }
