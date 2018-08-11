@@ -2,7 +2,7 @@
     outline: 1px solid red;
 } */
 .bg-img {
-    background-image: url(/assets/images/tape.jpg);
+    background-image: url(https://github.com/porterwilcox/Music-Is-Fun/blob/master/assets/images/tape.jpg?raw=true);
     height: 100vh;
     width: 100vw;
     background-attachment: fixed;
