@@ -13,9 +13,9 @@
         crossorigin="anonymous">
 </head>
 
-<body>
+<body class="bg-img">
     <div class="container-fluid">
-        <div class="row bg-img">
+        <div class="row">
             <div class="col-sm-4 form-pos">
                 <form class="form" onsubmit="app.controllers.itunesController.getMusic(event)">
                     <!--DO NOT MODIFY THE ID OR ONCLICK ATTRIBUTES IN THIS FORM-->
@@ -31,16 +31,12 @@
                 </form>
                 <div class="spacer">space</div>                
             </div>
-                <div class="col-sm-7 offset-sm-1">
-                    <div class="row top-hit">
-                        
-                    </div>
+                <div class="col-sm-8">
+                    <div class="row top-hit"></div>
+                    <div class="row" id="songs"></div>
                 </div>
             </div>
         </div>
-    <div class="container">
-        <div class="row" id="songs"></div>
-    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="module" src="main.js"></script>
 </body>

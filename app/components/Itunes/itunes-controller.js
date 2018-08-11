@@ -8,39 +8,44 @@ function drawSongs(results) {
   console.log(results)
   let song = results[0];
   let template1 = `
-  <div class="col-sm-8 h-75">
-  <div class="card">
-    <h2 class="card-title">${song.title}</h2>
-    <img class="card-img-top" src="${song.albumArt}" alt="ablum art">
-    <div class="card-body">
+  <div class="col-sm-8 offset-sm-2">
+  <div class="card w-75">
+  <h2 style="text-align: center">Top Hit</h2>
+  <img class="card-img-top" src="${song.albumArt}" alt="ablum art">
+  <div class="card-body">
+       <h1 class="card-title">${song.title}</h1>
        <h4 class="card-subtitle">${song.artist}</h4>
-       <h3 class="card-subtitle">${song.collection}</h3>
-       <audio controls>
+       <h3 class="card-subtitle mb-1">${song.collection}</h3>
+       <audio controls style="width: 100%">
           <source src="${song.preview}">
        </audio>
-       <h2>$${song.price}</h2>
+       <h2 style="text-align: right">$${song.price}</h2>
     </div>
   </div>
   </div>  
   `
-  let template = '';
+  let template2 = '';
   for (let i = 1; i < results.length; i++) {
     const song = results[i];
-    template += `
-    <div class="card">
-    <h2 class="card-title">${song.title}</h2>
+    template2 += `
+    <div class="col-sm-5 offset-sm-1">
+    <div class="card mb-5">
     <img class="card-img-top" src="${song.albumArt}" alt="ablum art">
     <div class="card-body">
+    <h2 class="card-title">${song.title}</h2>
        <h4 class="card-subtitle">${song.artist}</h4>
-       <h3 class="card-subtitle">${song.collection}</h3>
-       <span>${song.preview}</span>
-       <h2>$${song.price}</h2>
+       <h4 class="card-subtitle mb-1">${song.collection}</h4>
+       <audio controls style="width: 100%">
+          <source src="${song.preview}">
+       </audio>
+       <h2 style="text-align: right">$${song.price}</h2>
     </div>
+  </div>
   </div>  
   `
   }
   document.querySelector(".top-hit").innerHTML = template1;
-  document.getElementById("songs").innerHTML = template;
+  document.getElementById("songs").innerHTML = template2;
 }
 
 
