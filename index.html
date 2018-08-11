@@ -21,7 +21,7 @@
                     <!--DO NOT MODIFY THE ID OR ONCLICK ATTRIBUTES IN THIS FORM-->
                     <div class="form-row">
                         <div class="form-group">
-                            <input type="text" class="form-control" name="artist" placeholder="Artist Name" />                            
+                            <input type="text" class="form-control" name="artist" placeholder="search artist" autofocus />                            
                             <button type="submit" class="btn btn-primary" id="get-music-button">Get Music</button>
                             <!-- <a href="#songs-title" target="_top">
                                 <i class="fas fa-arrow-circle-down"></i>
@@ -29,10 +29,12 @@
                         </div>
                     </div>
                 </form>
-                <div class="spacer">space</div>                
+                <div class="title-spacer">space</div>                
             </div>
-                <div class="col-sm-8">
-                    <div class="row top-hit"></div>
+                <div class="col-sm-7 offset-sm-1 music">
+                    <div class="top-hit-spacer">space</div>
+                        <div class="row top-hit"></div>
+                    <div class="top-hit-spacer">space</div>
                     <div class="row" id="songs"></div>
                 </div>
             </div>

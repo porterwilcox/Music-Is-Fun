@@ -18,13 +18,40 @@
     align-items: center;
     height: 100vh;
 }
-.spacer {
+.form-group {
+    position: fixed;
+    left: 5em;
+}
+.title-spacer {
     color: transparent;
-    font-size: 10em;
+    font-size: 15em;
+    width: 100%;
 }
 .top-hit {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+}
+.top-hit-card {
+    height: 65%;
+}
+.top-hit-spacer {
+    color: transparent;
+    font-size: .5em;
+}
+#songs {
+    display: flex;
+    justify-content: center;
+}
+.form-control, .form-control:focus, .form-control:active, .form-control::placeholder {
+    background-color: transparent;
+    border: none;
+    color: white;
+    outline: none;
+    box-shadow: none;
+    font-size: 2em;
+    height: fit-content;
+}
+button {
+    visibility: hidden;
 }

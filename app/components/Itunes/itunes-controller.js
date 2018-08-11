@@ -6,10 +6,12 @@ const itunesService = new ItunesService()
 
 function drawSongs(results) {
   console.log(results)
-  let song = results[0];
+  let musicResults = [];
+  results.filter(s => s.preview.includes("video")? s : musicResults.push(s));
+  let song = musicResults[0];
   let template1 = `
-  <div class="col-sm-8 offset-sm-2">
-  <div class="card w-75">
+  <div class="col-sm-10">
+  <div class="card top-hit-card">
   <h2 style="text-align: center">Top Hit</h2>
   <img class="card-img-top" src="${song.albumArt}" alt="ablum art">
   <div class="card-body">
@@ -25,10 +27,10 @@ function drawSongs(results) {
   </div>  
   `
   let template2 = '';
-  for (let i = 1; i < results.length; i++) {
-    const song = results[i];
+  for (let i = 1; i < musicResults.length; i++) {
+    const song = musicResults[i];
     template2 += `
-    <div class="col-sm-5 offset-sm-1">
+    <div class="col-sm-6 card-deck">
     <div class="card mb-5">
     <img class="card-img-top" src="${song.albumArt}" alt="ablum art">
     <div class="card-body">
@@ -48,6 +50,34 @@ function drawSongs(results) {
   document.getElementById("songs").innerHTML = template2;
 }
 
+document.querySelector(".music").addEventListener('play', function(event){
+  let previews = document.getElementsByTagName("audio")
+  for (let i = 0; i < previews.length; i++) {
+    const soundBite = previews[i];
+    if (soundBite == event.target){
+      soundBite.play()
+    }
+    else {
+      soundBite.pause();
+    }    
+  }
+}, true)
+
+let artist = document.getElementsByTagName("input");
+artist[0].addEventListener('keyup', letters)
+artist[0].addEventListener('keyup', showButton)
+function letters(){
+  artist[0].value = artist[0].value.toUpperCase();
+}
+function showButton(){
+  let wait = setTimeout(showButtonNow, 500);
+}
+function showButtonNow(){
+  let button = document.getElementsByTagName("button");
+  button[0].style.visibility = "visible";
+}
+
+
 
 //PUBLIC
 class ItunesController {
@@ -62,9 +92,13 @@ class ItunesController {
       //changes button back to GET MUSIC once songs are loaded
       $('#get-music-button').text('GET MUSIC');
     })
+    let hackyWaitTime = setTimeout(topPlease, 750);
+    function topPlease(){
+      window.scrollTo(top);
+    }
+    let button = document.getElementsByTagName("button");
+    button[0].style.visibility = "hidden";
   }
-
-
 }
 
 
