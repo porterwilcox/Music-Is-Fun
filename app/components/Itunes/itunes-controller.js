@@ -16,7 +16,7 @@ function drawSongs(results) {
   <img class="card-img-top" src="${song.albumArt}" alt="ablum art">
   <div class="card-body">
        <h1 class="card-title">${song.title}</h1>
-       <h4 class="card-subtitle">${song.artist}</h4>
+       <h4 class="card-subtitle mb-2">${song.artist}</h4>
        <h3 class="card-subtitle mb-1">${song.collection}</h3>
        <audio controls style="width: 100%">
           <source src="${song.preview}">
@@ -35,7 +35,7 @@ function drawSongs(results) {
     <img class="card-img-top" src="${song.albumArt}" alt="ablum art">
     <div class="card-body">
     <h2 class="card-title">${song.title}</h2>
-       <h4 class="card-subtitle">${song.artist}</h4>
+       <h5 class="card-subtitle mb-2">${song.artist}</h5>
        <h4 class="card-subtitle mb-1">${song.collection}</h4>
        <audio controls style="width: 100%">
           <source src="${song.preview}">
