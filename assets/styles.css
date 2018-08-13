@@ -63,7 +63,7 @@ button {
 /* mobile */
 @media (pointer: coarse) and (hover: none){
     .bg-img {
-        background-image: url(/assets/images/tape-copy.jpg);
+        background-image: url(https://github.com/porterwilcox/Music-Is-Fun/blob/master/assets/images/tape-copy.jpg?raw=true);
     }
     .top-hit-card {
         width: 135%;
