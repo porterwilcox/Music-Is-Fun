@@ -31,7 +31,7 @@ function drawSongs(results) {
     const song = musicResults[i];
     template2 += `
     <div class="col-sm-6 card-deck">
-    <div class="card mb-5">
+    <div class="card mb-5 song-card">
     <img class="card-img-top" src="${song.albumArt}" alt="ablum art">
     <div class="card-body">
     <h2 class="card-title">${song.title}</h2>
