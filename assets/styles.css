@@ -61,7 +61,7 @@ button {
 }
 
 /* mobile */
-@media (pointer: coarse) and (hover: none){
+@media (pointer: coarse) and (hover: none) { 
     .bg-img {
         background-image: url(images/tape-copy.jpg);
     }
