@@ -6,8 +6,13 @@ const itunesService = new ItunesService()
 
 function drawSongs(results) {
   console.log(results)
-  let musicResults = [];
-  results.filter(s => s.preview.includes("video")? s : musicResults.push(s));
+  debugger
+  let musicResults = results.filter(s => {
+    if (!s.preview) {
+      return
+     } 
+      return s.preview.includes("video")? '' : s
+  });
   let song = musicResults[0];
   let template1 = `
   <div class="col-sm-10">
@@ -94,7 +99,7 @@ class ItunesController {
     })
     let hackyWaitTime = setTimeout(topPlease, 750);
     function topPlease(){
-      window.scrollTo(top);
+      window.scrollTo(0, 0);
     }
     let button = document.getElementsByTagName("button");
     button[0].style.visibility = "hidden";
