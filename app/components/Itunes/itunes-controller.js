@@ -6,7 +6,6 @@ const itunesService = new ItunesService()
 
 function drawSongs(results) {
   console.log(results)
-  debugger
   let musicResults = results.filter(s => {
     if (!s.preview) {
       return
